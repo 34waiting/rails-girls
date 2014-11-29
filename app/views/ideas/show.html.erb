@@ -14,6 +14,10 @@
   <strong>Picture:</strong>
   <%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
 </p>
+<p>
+	<strong>Star:</strong>
+	 <td><%= Star.find(@idea.star_id).shine if @idea.star_id.present? %></td>
+</p>
 
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
 <%= link_to 'Back', ideas_path %>

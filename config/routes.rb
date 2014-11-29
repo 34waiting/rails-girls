@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :stars
+
   get 'pages/info'
 
   resources :ideas
